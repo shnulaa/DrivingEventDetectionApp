@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.driving.view.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:onClick="onStartTrip"
+            android:text="StartTrip" />
+        
+        <Button
+            android:id="@+id/tripdetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:onClick="onTripDetection"
+            android:text="TripDetection" />
+
+        <Button
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="5dp"
+            android:onClick="onLoadMap"
+            android:text="Load Map" />
+
+        <Button
+            android:id="@+id/clearlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonmap"
+            android:layout_marginTop="5dp"
+            android:onClick="clearLogs"
+            android:text="Clear Logs" />
+    </LinearLayout>
+<ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
+     android:layout_below="@+id/linear">
+        
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Logs" 
+       />
+ </ScrollView>
+</RelativeLayout>
